@@ -7,14 +7,13 @@
 # Daniel Koska (koda86), Aug 30 2021
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-upper <- 1000
-
-nums <- 1:(upper-1)
+count <- 1000
+nums <- 1:(count-1)
 
 mod <- function (x, y) {x %% y}
 
-mod3.idx <- unlist(lapply(nums, 3, FUN = mod))
-mod5.idx <- unlist(lapply(nums, 5, FUN = mod))
+mod3.idx <- sapply(nums, 3, FUN = mod)
+mod5.idx <- sapply(nums, 5, FUN = mod)
 
 multiples <- nums[mod3.idx==0 | mod5.idx==0]
 
