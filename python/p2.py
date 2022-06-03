@@ -8,8 +8,6 @@ find the sum of the even-valued terms.
 Daniel Koska (koda86), Jun 02 2022
 """
 
-import numpy as np
-
 def fibo(i):
     if i in {0, 1}:
         return i
@@ -17,11 +15,8 @@ def fibo(i):
         return fibo(i-1) + fibo(i-2)
     
 l = []
-
-for i in np.arange(start = 1, stop = 40, step = 1):
-    
-#     print(i, fibo(i))
-    
+for i in range(1, 40):
+       
     if fibo(i) < 4e6:
         if fibo(i) % 2 == 0:
             l.append(fibo(i))
