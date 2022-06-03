@@ -14,7 +14,7 @@ def fibo(i):
     else:    
         return fibo(i-1) + fibo(i-2)
     
-l = []
+l = list()
 for i in range(1, 40):
        
     if fibo(i) < 4e6:
