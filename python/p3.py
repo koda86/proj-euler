@@ -6,18 +6,19 @@ What is the largest prime factor of the number 600851475143?
 Daniel Koska (koda86), Dec 13 2021
 """
 
+import numpy as np
+
 # Prime factors: 5*7*13*29 = 13195
 
 # Check if number is prime
 def is_prime(n):
-  for i in range(2, n-1):
-    if n%i == 0:
-      print(i)
-      print("No prime number!")
-      return False
-    else:
-      print(i)
-      print("Is a prime number!")
-      return True
+    if n < 2:
+        return False
+    
+    # Check for divisors of n from 2 to the square root of n
+    for i in range(2, int(np.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
 
-is_prime(16)
+is_prime(4)
