@@ -26,7 +26,6 @@ def get_prime_factors(n):
   for i in range(2, n):
     if is_prime(i) and (n%i == 0):
       primefactors.append(i)
-      print(primefactors)
   return primefactors
 
 n = 600851475143
