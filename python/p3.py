@@ -23,11 +23,11 @@ def is_prime(n):
 
 def get_prime_factors(n):
   primefactors = list()
-  for i in range(3, n):
+  for i in range(2, n):
     if is_prime(i) and (n%i == 0):
       primefactors.append(i)
       print(primefactors)
   return primefactors
 
-n = 16
+n = 600851475143
 largest_prime_factor = max(get_prime_factors(n))
