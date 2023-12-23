@@ -21,4 +21,12 @@ def is_prime(n):
             return False
     return True
 
-is_prime(4)
+def largest_prime_factor(n):
+  p = 2
+  for i in range(3, n):
+    if is_prime(n) and n > p:
+      p = n
+      return n
+  
+
+print(largest_prime_factor(15)) # 600851475143
