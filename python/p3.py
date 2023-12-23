@@ -21,12 +21,13 @@ def is_prime(n):
             return False
     return True
 
-def largest_prime_factor(n):
-  p = 2
+def get_prime_factors(n):
+  primefactors = list()
   for i in range(3, n):
-    if is_prime(n) and n > p:
-      p = n
-      return n
-  
+    if is_prime(i) and (n%i == 0):
+      primefactors.append(i)
+      print(primefactors)
+  return primefactors
 
-print(largest_prime_factor(15)) # 600851475143
+n = 16
+largest_prime_factor = max(get_prime_factors(n))
