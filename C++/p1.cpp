@@ -6,7 +6,11 @@ Find the sum of all the multiples of 3 or 5 below.*/
 using namespace std;
 
 int main() {
-	cout << "First challenge!" << endl;
+	int threshold = 50;
+	
+	for(int i=0; i<threshold; i++){
+		cout << i << endl;
+	};
 
 	return 0;
 }
